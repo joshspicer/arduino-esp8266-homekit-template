@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/Users/josh/Documents/Arduino/libraries/Mixiaoxiao-Arduino-HomeKit-ESP8266-9577a99",
+                "/Users/josh/Documents/Arduino/libraries/Mixiaoxiao-Arduino-HomeKit-ESP8266-9577a99/src",
+                "/Users/josh/Library/Arduino15"
+            ],
+            "defines": [],
+            "macFrameworkPath": [],
+            "compilerPath": "/usr/local/bin/gcc-11",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "macos-gcc-x64"
+        }
+    ],
+    "version": 4
+}

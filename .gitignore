@@ -1,5 +1,7 @@
 homekit.zip
 
+*/**/.DS_Store
+
 # Prerequisites
 *.d
 
