@@ -3,7 +3,7 @@
 
     Created on: 2020-05-15
         Author: Mixiaoxiao (Wang Bin)
-    Modified on: 2021-05-17
+    Modified on: 2021-07-24
         Modifier: Josh Spicer <hello@joshspicer.com>
 */
 
@@ -17,7 +17,7 @@ void setup()
 {
   Serial.begin(115200);
   wifi_connect(); // in wifi_info.h
-                  // homekit_storage_reset(); // to remove the previous HomeKit pairing storage when you first run this new HomeKit example
+//  homekit_storage_reset(); // to remove the previous HomeKit pairing storage when you first run this new HomeKit example
   my_homekit_setup();
 }
 
@@ -68,11 +68,8 @@ void my_homekit_loop()
   // Green Button Pressed
   if (checkValues && greenRead == LOW)
   {
-    bool previous = green_button.value.bool_value;
-    LOG_D("GREEN. Previous: %d", previous)
-    green_button.value.bool_value = !previous;
-
-    homekit_characteristic_notify(&green_button, green_button.value);
+    LOG_D("GREEN");
+    homekit_characteristic_notify(&green_button,  green_button.value);
 
     next_debounce = t + 500; // Only check values after 0.5 seconds
   }
@@ -80,10 +77,7 @@ void my_homekit_loop()
   // Yellow Button Pressed
   if (checkValues && yellowRead == LOW)
   {
-    bool previous = yellow_button.value.bool_value;
-    LOG_D("YELLOW. Previous: %d", previous)
-    yellow_button.value.bool_value = !previous;
-
+    LOG_D("YELLOW");
     homekit_characteristic_notify(&yellow_button, yellow_button.value);
 
     next_debounce = t + 500; // Only check values after 0.5 seconds

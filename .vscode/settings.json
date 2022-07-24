@@ -2,6 +2,7 @@
     "C_Cpp.errorSquiggles": "Enabled",
     "files.associations": {
         "__locale": "c",
-        "thread": "c"
+        "thread": "c",
+        "typeinfo": "cpp"
     }
 }
